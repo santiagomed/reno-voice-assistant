@@ -52,7 +52,7 @@ class Reno:
             time.sleep(5)
 
         elif 'gmail' in command:
-            webbrowser.open_new_tab("gmail.com")
+            webbrowser.open_new_tab("https://www.gmail.com")
             self.say("G-Mail is open now")
             time.sleep(5)
 
@@ -66,6 +66,13 @@ class Reno:
         self.say(results)
 
     def getTime(self):
-        strTime = datetime.datetime.now().strftime("%H:%M:%S")
+        hour = datetime.datetime.now().hour
+
+        if hour >= 0 and hour < 12: meridiem = "am"
+        else: meridiem = "pm"
+
+        hour = hour % 12
+        minute = datetime.datetime.now().minute
+        strTime = str(f"{hour}:{minute} {meridiem}")
         self.say(f"It is {strTime}")
         print(f"It is {strTime}")

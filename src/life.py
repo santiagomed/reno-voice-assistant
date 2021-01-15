@@ -19,10 +19,9 @@ def life():
             continue
         if 'time' in command:
             RENO.getTime()
+            continue
 
-        if command == "none":
-            RENO.say("I am sorry, I didn't understand.")
-            break
+        RENO.say("I am sorry, I didn't understand.")
 
 if __name__ == "__main__":
     life()
