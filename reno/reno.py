@@ -73,6 +73,6 @@ class Reno:
 
         hour = hour % 12
         minute = datetime.datetime.now().minute
-        strTime = str(f"{hour}:{minute} {meridiem}")
-        self.say(f"It is {strTime}")
-        print(f"It is {strTime}")
+        time = str(f"{hour}:{minute} {meridiem}")
+        self.say(f"It is {time}")
+        print(f"It is {time}")

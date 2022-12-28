@@ -8,7 +8,7 @@ def life():
         command = getInput().lower()
         if command == 0:
             continue
-        if "bye" in command or "no" == command or "stop" == command:
+        if 'bye' in command or 'no' == command or 'stop' == command:
             RENO.goodbye()
             break
         if 'wikipedia' in command:
